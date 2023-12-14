@@ -1,0 +1,22 @@
+// client/.eslintrc:
+{
+  "parser": "@babel/eslint-parser",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "plugins": ["@babel"],
+  "rules": {
+    // Override our default settings just for this directory
+    "eqeqeq": "warn",
+    "strict": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
+    "no-restricted-globals": "off"
+  }
+}
