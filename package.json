@@ -7,7 +7,7 @@
     "start:dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run server\"",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "server": "nodemon server/server.js",
-    "build": "cd client && npm run build",
+    "build": "cd client && npx webpack --mode production",
     "install": "npm run install --prefix client && npm run install --prefix server",
     "client": "cd client && npm start"
   },
@@ -23,5 +23,8 @@
     "copy-webpack-plugin": "^11.0.0",
     "html-webpack-plugin": "^5.5.4",
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "20.10.0"
   }
 }
