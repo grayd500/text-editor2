@@ -7,8 +7,7 @@
     "start:dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run server\"",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "server": "nodemon server/server.js",
-    "build": "cd client && ./node_modules/.bin/webpack --mode production",
-    "install": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "webpack --config client/webpack.config.js --mode production",
     "client": "cd client && npm start"
   },
   "keywords": [],
